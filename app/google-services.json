@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "694685649995",
+    "firebase_url": "https://iyans-f56ff.firebaseio.com",
+    "project_id": "iyans-f56ff",
+    "storage_bucket": "iyans-f56ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694685649995:android:719c0335c6e64f5d",
+        "android_client_info": {
+          "package_name": "com.iyans"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694685649995-nm035efr2ubr16r63ajvcrqhgvrep17u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iyans",
+            "certificate_hash": "984f1a7354c7e73da3a49e1663e1e435704242ca"
+          }
+        },
+        {
+          "client_id": "694685649995-fj6nackkppnhnr8sittpj1ns3sn1f6bl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbCF64IxqxIBG6-KzzbXbV2WprQQ4hzd4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694685649995-fj6nackkppnhnr8sittpj1ns3sn1f6bl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

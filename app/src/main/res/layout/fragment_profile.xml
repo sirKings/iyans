@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/rLOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin10">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgViewProfile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/margin20"
+                android:src="@drawable/user_placeholder_white"
+                app:civ_border_color="@color/colorWhite"
+                app:civ_border_width="@dimen/margin1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_toRightOf="@+id/imgViewProfile">
+
+                <TextView
+                    android:id="@+id/tvArchive"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin2"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@color/darkGrey"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:paddingBottom="@dimen/margin2"
+                    android:paddingTop="@dimen/margin2"
+                    android:text="Archive"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize12" />
+
+                <TextView
+                    android:id="@+id/tvArchiveValue"
+                    android:layout_width="32dp"
+                    android:layout_height="37dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tvArchive"
+                    android:layout_marginRight="@dimen/margin2"
+                    android:background="@drawable/archive"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/tvFollowing"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_toLeftOf="@+id/tvArchive"
+                    android:background="@color/darkGrey"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:paddingBottom="@dimen/margin2"
+                    android:paddingTop="@dimen/margin2"
+                    android:text="Following"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize12" />
+
+                <TextView
+                    android:id="@+id/tvFollowingValue"
+                    android:layout_width="32dp"
+                    android:layout_height="37dp"
+                    android:layout_below="@+id/tvFollowing"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:layout_toLeftOf="@+id/tvArchiveValue"
+                    android:background="@drawable/following"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/tvFollow"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tvTelePost"
+                    android:layout_alignBottom="@+id/tvTelePost"
+                    android:layout_toRightOf="@+id/tvTelePostValue"
+                    android:background="@color/darkGrey"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:paddingBottom="@dimen/margin2"
+                    android:paddingTop="@dimen/margin2"
+                    android:text="@string/follow"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize12" />
+
+                <TextView
+                    android:id="@+id/tvFollowValue"
+                    android:layout_width="32dp"
+                    android:layout_height="37dp"
+                    android:layout_below="@+id/tvFollow"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:layout_toLeftOf="@+id/tvFollowingValue"
+                    android:background="@drawable/follow"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/tvTelePost"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_toLeftOf="@+id/tvFollow"
+                    android:background="@color/darkGrey"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:paddingBottom="@dimen/margin2"
+                    android:paddingTop="@dimen/margin2"
+                    android:text="@string/tele_post"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize12" />
+
+                <TextView
+                    android:id="@+id/tvTelePostValue"
+                    android:layout_width="32dp"
+                    android:layout_height="37dp"
+                    android:layout_below="@+id/tvTelePost"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:layout_toLeftOf="@+id/tvFollowValue"
+                    android:background="@drawable/feeds"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize14" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rLOne"
+            android:layout_marginRight="@dimen/margin20"
+            android:background="@drawable/round_corner"
+            android:paddingLeft="@dimen/margin8"
+            android:paddingRight="@dimen/margin8">
+
+            <TextView
+                android:id="@+id/tvEditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:drawablePadding="@dimen/margin4"
+                android:drawableRight="@drawable/edit_profile"
+                android:gravity="center"
+                android:padding="@dimen/margin4"
+                android:text="Edit Your Profile"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize10"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relTab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relProfile">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabIndicatorHeight="@dimen/margin2"
+                app:tabSelectedTextColor="@color/colorPrimaryText"
+                app:tabTextColor="@color/colorHint"
+                app:tabTextAppearance="@style/TabLayoutStyle">
+
+                <android.support.design.widget.TabItem
+                    android:id="@+id/tabItemUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:icon="@drawable/users"
+                    android:text="Users" />
+
+                <android.support.design.widget.TabItem
+                    android:id="@+id/tabItemFollower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:icon="@drawable/circle_follow"
+                    android:text="Followers" />
+
+                <android.support.design.widget.TabItem
+                    android:id="@+id/tabItemFollowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:icon="@drawable/circle_following"
+                    android:text="Following" />
+
+                <android.support.design.widget.TabItem
+                    android:id="@+id/tabItemArchive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:icon="@drawable/circle_archive"
+                    android:text="Archive" />
+            </android.support.design.widget.TabLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tabs" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

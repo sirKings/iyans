@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nsvMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plane_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/header_both"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <RelativeLayout
+            android:id="@+id/rlActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="backPage"
+                android:padding="@dimen/margin5"
+                android:src="@drawable/ic_navigate_before_black_24dp" />
+
+            <ImageView
+                android:id="@+id/ivIyansLogo"
+                android:layout_width="64dp"
+                android:layout_height="28dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textSize20"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivBackPage"
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/margin10"
+                android:src="@android:color/white" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBottom"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlUserDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin5">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfileImg"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:src="@drawable/user_placeholder_white"
+                    app:civ_border_color="@android:color/white"
+                    app:civ_border_width="1dp"
+                    android:paddingLeft="@dimen/margin5" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ivProfileImg"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:layout_toRightOf="@+id/ivProfileImg"
+                    android:padding="@dimen/margin2"
+                    android:text="Shuchi"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textSize16"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ivMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/tvName"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:paddingBottom="@dimen/margin8"
+                    android:paddingLeft="@dimen/margin8"
+                    android:paddingRight="@dimen/margin5"
+                    android:paddingTop="@dimen/margin5"
+                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvFeedTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_marginRight="@dimen/margin15"
+                    android:layout_toRightOf="@+id/ivProfileImg"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:padding="@dimen/margin2"
+                    android:text="Feed artical title"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/tvTimeShow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvFeedTitle"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_marginRight="@dimen/margin15"
+                    android:layout_toRightOf="@+id/ivProfileImg"
+                    android:padding="@dimen/margin2"
+                    android:text="3 days"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textSize14" />
+
+                <LinearLayout
+                    android:id="@+id/llImageVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivProfileImg"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin5">
+
+                    <ImageView
+                        android:id="@+id/ivFeedImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/footer"
+                        android:visibility="gone" />
+
+                    <cn.jzvd.JZVideoPlayerStandard
+                        android:id="@+id/videoplayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvDecription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llImageVideo"
+                    android:padding="@dimen/margin5"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                    android:textColor="@color/colorWhite" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/tvDecription"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/hype" />
+
+                        <TextView
+                            android:id="@+id/tvHypes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Hyped"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/comments" />
+
+                        <TextView
+                            android:id="@+id/tvComments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Comments"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_visibility_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/tvViews"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="7"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/vwDevider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rlUserDetail"
+                android:layout_marginLeft="@dimen/margin5"
+                android:layout_marginRight="@dimen/margin5"
+                android:background="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tvHypesTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vwDevider1"
+                android:padding="@dimen/margin5"
+                android:text="Hypes"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textSize16"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcvHypes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHypesTxt"
+                android:minHeight="@dimen/margin30"
+                android:orientation="horizontal" />
+
+            <View
+                android:id="@+id/vwDevider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rcvHypes"
+                android:layout_marginLeft="@dimen/margin5"
+                android:layout_marginRight="@dimen/margin5"
+                android:background="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tvCommentsTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vwDevider2"
+                android:padding="@dimen/margin5"
+                android:text="Comments"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textSize16"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcvComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCommentsTxt"
+                android:minHeight="@dimen/margin30"
+                android:orientation="vertical" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/vwDevider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/etTypeComment"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/etTypeComment"
+            android:background="@color/colorBg"
+            android:gravity="center"
+            android:text="Send"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textSize16" />
+
+        <EditText
+            android:id="@+id/etTypeComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btnSend"
+            android:background="@color/colorBg"
+            android:hint="@string/add_a_comment"
+            android:maxLines="4"
+            android:padding="@dimen/margin14"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" />
+    </RelativeLayout>
+
+    <com.sa90.materialarcmenu.ArcMenu
+        android:id="@+id/arcMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        app:menu_color="@color/colorBg"
+        app:menu_margin="@dimen/margin8"
+        app:menu_open="arc_top_left"
+        app:menu_radius="120dp"
+        app:menu_scr="@drawable/share">
+
+        <ImageButton
+            android:id="@+id/ftbChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nav_chat"
+            app:backgroundTint="@android:color/white" />
+
+        <ImageButton
+            android:id="@+id/ftbFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/white"
+            android:src="@drawable/nav_feeds" />
+
+        <ImageButton
+            android:id="@+id/ftbTelepost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/white"
+            android:src="@drawable/nav_telepost" />
+    </com.sa90.materialarcmenu.ArcMenu>
+</RelativeLayout>

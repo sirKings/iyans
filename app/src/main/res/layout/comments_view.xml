@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/margin10"
+    android:paddingRight="@dimen/margin10"
+    android:paddingTop="@dimen/margin10">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_margin="@dimen/margin5"
+        android:src="@drawable/user_placeholder_white"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="1dp" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivUserImage"
+        android:layout_marginLeft="@dimen/margin5"
+        android:layout_marginRight="@dimen/margin5"
+        android:layout_toRightOf="@+id/ivUserImage"
+        android:padding="@dimen/margin5"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textSize14"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tvUserName"
+        android:layout_marginLeft="@dimen/margin5"
+        android:layout_marginRight="@dimen/margin5"
+        android:background="@drawable/cornorblue"
+        android:padding="@dimen/margin5"
+        android:src="@drawable/ic_edit_black_18dp" />
+
+    <TextView
+        android:id="@+id/tvUserMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserName"
+        android:layout_marginLeft="@dimen/margin5"
+        android:layout_marginRight="@dimen/margin15"
+        android:layout_toRightOf="@+id/ivUserImage"
+        android:ellipsize="end"
+        android:padding="@dimen/margin5"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textSize14" />
+</RelativeLayout>

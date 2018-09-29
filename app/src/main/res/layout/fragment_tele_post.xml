@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="@dimen/margin10"
+        android:layout_marginRight="@dimen/margin10"
+        android:layout_marginTop="@dimen/margin20">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgViewProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user_placeholder_white"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="@dimen/margin1" />
+
+        <EditText
+            android:id="@+id/edtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin8"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_toRightOf="@+id/imgViewProfile"
+            android:background="@drawable/btn_bg_follow"
+            android:hint="@string/feed_article_title"
+            android:imeOptions="actionNone|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+            android:padding="@dimen/margin8"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryText"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/textSize14" />
+
+        <EditText
+            android:id="@+id/edtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtTitle"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_toRightOf="@+id/imgViewProfile"
+            android:background="@drawable/btn_bg_follow"
+            android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+            android:hint="@string/what_s_on_your_mind"
+            android:imeOptions="actionGo|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+            android:lines="4"
+            android:padding="@dimen/margin8"
+            android:textColor="@color/colorPrimaryText"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/textSize14" />
+
+        <ImageView
+            android:id="@+id/imgViewCamera"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/edtMessage"
+            android:layout_marginLeft="@dimen/margin8"
+            android:layout_marginTop="@dimen/margin14"
+            android:layout_toRightOf="@+id/imgViewProfile"
+            android:src="@drawable/ic_camera_alt_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imgViewAudio"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/edtMessage"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_marginTop="@dimen/margin14"
+            android:layout_toRightOf="@+id/imgViewCamera"
+            android:src="@drawable/vedio" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtMessage"
+            android:layout_marginLeft="@dimen/margin8"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_toRightOf="@+id/imgViewAudio"
+            android:background="@color/colorPrimary"
+            android:text="@string/send"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize16" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSend"
+            android:layout_marginTop="@dimen/margin10"
+            android:gravity="center"
+            android:padding="@dimen/margin2"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

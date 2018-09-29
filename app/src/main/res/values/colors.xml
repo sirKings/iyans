@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#2196f3</color>
+    <color name="colorBg">#262a37</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlue">#2196f3</color>
+    <color name="colorCyan">#00bcd4</color>
+    <color name="colorEd">#ededed</color>
+    <color name="colorFacebook">#3b5998</color>
+    <color name="colorGrey">#27495c</color>
+    <color name="colorHint">#bdbdbd</color>
+    <color name="colorLightGrey">#356280</color>
+    <color name="colorPrimary">#0d84c8</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorTwitter">#1da1f2</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#2998cd</color>
+    <color name="light_black">#0a0a0a</color>
+    <color name="darkGrey">#363d4d</color>
+    <color name="grey">#757575</color>
+    <color name="filter_label_normal">#8a8889</color>
+    <color name="filter_label_selected">#221f20</color>
+</resources>

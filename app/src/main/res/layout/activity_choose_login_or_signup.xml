@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen"
+    android:paddingLeft="@dimen/margin30"
+    android:paddingRight="@dimen/margin30">
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_copyright"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin10"
+        android:background="@drawable/roundgrey"
+        android:text="@string/sign_up"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textSize16" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_signup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin4"
+        android:background="@drawable/roundblue"
+        android:text="@string/login"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textSize16" />
+
+    <TextView
+        android:id="@+id/tv_copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin20"
+        android:text="@string/copyright_2013_iyans_all_rights_reserved"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textSize14" />
+</RelativeLayout>

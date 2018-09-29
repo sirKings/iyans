@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/header_left"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_navigate_before_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/setting"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize20"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/topRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvGeneral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin20"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:text="@string/general_setting"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/textSize18" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvGeneral"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@color/grey" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/swSoundEffect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin8"
+                    android:background="@drawable/btn_bg_follow"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/sound_effect"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/swImagePreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/swSoundEffect"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@drawable/btn_bg_follow"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/image_preview"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/swNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/swImagePreview"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@drawable/btn_bg_follow"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/notification"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/midRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topRelativeLayout">
+
+                <TextView
+                    android:id="@+id/tvAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin20"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:text="@string/account_setting"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/textSize18" />
+
+                <View
+                    android:id="@+id/viewTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAccount"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/tvEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewTwo"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin8"
+                    android:background="@drawable/btn_bg_follow"
+                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/edit_profile"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/tvChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvEditProfile"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@drawable/btn_bg_follow"
+                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/change_password"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/swAccountPrivacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvChangePassword"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@drawable/btn_bg_follow"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/account_privacy"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottomRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/midRelativeLayout">
+
+                <TextView
+                    android:id="@+id/tvLinkedAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin20"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:text="@string/linked_account"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/textSize18" />
+
+                <View
+                    android:id="@+id/viewThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvLinkedAccount"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@color/grey" />
+
+                <Button
+                    android:id="@+id/btnfacebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewThree"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin8"
+                    android:background="@drawable/btn_bg_follow"
+                    android:drawableLeft="@drawable/facebook"
+                    android:drawablePadding="@dimen/margin10"
+                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center_vertical"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/facebook"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+
+                <Button
+                    android:id="@+id/btnTwiter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnfacebook"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@drawable/btn_bg_follow"
+                    android:drawableLeft="@drawable/twitter"
+                    android:drawablePadding="@dimen/margin10"
+                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center_vertical"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/twiter"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+
+                <Button
+                    android:id="@+id/btnInstagram"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnTwiter"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@drawable/btn_bg_follow"
+                    android:drawableLeft="@drawable/instagram"
+                    android:drawablePadding="@dimen/margin10"
+                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                    android:gravity="start|center_vertical"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/instagram"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/endRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bottomRelativeLayout">
+
+                <TextView
+                    android:id="@+id/tvServices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin20"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:text="@string/services"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/textSize18" />
+
+                <View
+                    android:id="@+id/viewFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvServices"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@color/grey" />
+
+                <TextView
+                    android:id="@+id/tvAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewFour"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin8"
+                    android:background="@drawable/btn_bg_follow"
+                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/about"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/tvReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAbout"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@drawable/btn_bg_follow"
+                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/report_a_problem"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/tvAboutVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvReport"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@drawable/btn_bg_follow"
+                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/about_this_version"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/tvTerms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAboutVersion"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@drawable/btn_bg_follow"
+                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/terms"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/tvLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTerms"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:layout_marginLeft="@dimen/margin14"
+                    android:layout_marginRight="@dimen/margin14"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@drawable/btn_bg_follow"
+                    android:padding="@dimen/margin8"
+                    android:text="@string/logout"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textSize14" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSize10">10sp</dimen>
+    <dimen name="textSize12">12sp</dimen>
+    <dimen name="textSize14">14sp</dimen>
+    <dimen name="textSize16">16sp</dimen>
+    <dimen name="textSize18">18sp</dimen>
+    <dimen name="textSize20">20sp</dimen>
+    <dimen name="textSize24">24sp</dimen>
+    <dimen name="textSize28">28sp</dimen>
+    <dimen name="textSize36">36sp</dimen>
+    <dimen name="textSize46">46sp</dimen>
+    <dimen name="textSize8">8sp</dimen>
+    <dimen name="margin0">0dp</dimen>
+    <dimen name="margin1">1dp</dimen>
+    <dimen name="margin10">10dp</dimen>
+    <dimen name="margin14">14dp</dimen>
+    <dimen name="margin15">15dp</dimen>
+    <dimen name="margin2">2dp</dimen>
+    <dimen name="margin20">20dp</dimen>
+    <dimen name="margin25">25dp</dimen>
+    <dimen name="margin30">30dp</dimen>
+    <dimen name="margin4">4dp</dimen>
+    <dimen name="margin40">40dp</dimen>
+    <dimen name="margin5">5dp</dimen>
+    <dimen name="margin50">50dp</dimen>
+    <dimen name="margin60">60dp</dimen>
+    <dimen name="margin8">8dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="thumbnail_size">80dp</dimen>
+</resources>

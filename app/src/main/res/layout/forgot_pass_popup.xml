@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondaryText">
+
+    <TextView
+        android:id="@+id/tvRegisterTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin8"
+        android:text="@string/forgot_password"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textSize24" />
+
+    <View
+        android:id="@+id/vwDevider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvRegisterTxt"
+        android:layout_marginLeft="@dimen/margin10"
+        android:layout_marginRight="@dimen/margin10"
+        android:background="@color/colorWhite" />
+
+    <EditText
+        android:id="@+id/etRegisteredEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vwDevider"
+        android:layout_margin="@dimen/margin14"
+        android:background="@drawable/cornorwhite"
+        android:hint="Registered Email"
+        android:padding="@dimen/margin8"
+        android:textColorHint="@color/colorHint"
+        android:textSize="@dimen/textSize18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etRegisteredEmail"
+        android:orientation="horizontal"
+        android:weightSum="2.0">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:layout_weight="1.0"
+            android:background="@drawable/cornorblue"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textSize18" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:layout_weight="1.0"
+            android:background="@drawable/cornorblue"
+            android:text="Send"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textSize18" />
+    </LinearLayout>
+</RelativeLayout>

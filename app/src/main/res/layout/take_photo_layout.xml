@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/iv_gallery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/iv_gallery"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="Gallery"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/iv_camera"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="Camera"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>

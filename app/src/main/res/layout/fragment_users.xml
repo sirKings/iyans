@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_below="@+id/toolbar"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/mSwipeRefreshLayout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_below="@+id/textViewFollow"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin20"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_width="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:drawableTop="@drawable/ic_cloud_off_black_24dp"
+        android:gravity="center"
+        android:id="@+id/tvInfo"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorHint"
+        android:textSize="@dimen/textSize14"
+        android:visibility="invisible" />
+</RelativeLayout>

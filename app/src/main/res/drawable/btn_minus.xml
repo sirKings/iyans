@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <gradient android:startColor="#f7040c" android:endColor="#ae0003" android:type="linear" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_remove_white_24dp" android:left="@dimen/margin4" android:top="@dimen/margin4" android:right="@dimen/margin4" android:bottom="@dimen/margin4" />
+</layer-list>
